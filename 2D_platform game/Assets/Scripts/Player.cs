@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class Player : MonoBehaviour
 {
@@ -9,7 +12,11 @@ public class Player : MonoBehaviour
     public Rigidbody2D player;
 
     public bool IsJump;
-    
+    public float JumpForce;
+    public bool super;
+    public GameObject win;
+    public GameObject wintext;
+    public GameObject powerUp;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,32 +28,47 @@ public class Player : MonoBehaviour
         float Haxis = Input.GetAxis("Horizontal");
         transform.Translate(new Vector2((Haxis * vel) * Time.deltaTime, 0));
         jump();
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            super = false;
+            vel = 5;
+            JumpForce = 7;
+        }
     }
 
     private void jump()
     {
         if (Input.GetKeyDown(KeyCode.Space)&& IsJump == false)
         {
-            player.AddForce(new Vector2(0,5f), ForceMode2D.Impulse);
+            player.AddForce(new Vector2(0,JumpForce), ForceMode2D.Impulse);
             IsJump = true;
-            StartCoroutine(JumpTimer());
         }
     }
 
-    private IEnumerator JumpTimer()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("enter");
-        if (IsJump == true)
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            while (true)
-            {
-                Debug.Log("enter");
-                yield return new WaitForSeconds(2f);
-                IsJump = false;
-                Debug.Log("count");
-                break;
-            }
+            IsJump = false;
+            Debug.Log("collide");
         }
 
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            super = true;
+            Destroy(powerUp);
+            if (super == true)
+            {
+                vel = 10;
+                JumpForce = 10;
+            }
+        
+        }
+
+        if (collision.gameObject.CompareTag("win"))
+        {
+            Destroy(win);
+            wintext.SetActive(true);
+        }
     }
 }
