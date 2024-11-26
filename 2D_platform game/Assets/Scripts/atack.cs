@@ -17,7 +17,7 @@ public class atack : MonoBehaviour
     }
     private IEnumerator Timer()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         Destroy(this.gameObject);
     }
 }
