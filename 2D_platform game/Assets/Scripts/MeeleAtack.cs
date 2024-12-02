@@ -18,7 +18,7 @@ public class MeeleAtack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(atackMeelePrefab, new Vector3(player.transform.position.x + 0.20f, player.transform.position.y - 0.20f, 0), Quaternion.identity);
+            Instantiate(atackMeelePrefab, new Vector3(player.transform.position.x + 0.10f, player.transform.position.y - 0.20f, 0), Quaternion.identity);
         }
         
     }
