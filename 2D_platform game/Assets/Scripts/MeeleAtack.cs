@@ -7,6 +7,8 @@ public class MeeleAtack : MonoBehaviour
 {
     public GameObject atackMeelePrefab;
     public GameObject player;
+
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,10 @@ public class MeeleAtack : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Instantiate(atackMeelePrefab, new Vector3(player.transform.position.x + 0.10f, player.transform.position.y - 0.20f, 0), Quaternion.identity);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Instantiate(bullet, new Vector3(player.transform.position.x + 0.10f, player.transform.position.y - 0.20f, 0), Quaternion.identity);
         }
         
     }

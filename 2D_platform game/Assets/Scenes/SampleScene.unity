@@ -2745,8 +2745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c08f8a8c74d23040a202d14101861e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atackMeelePrefab: {fileID: 395343323212663391, guid: ddcb6db05099c00428e7b38eef55ba7a, type: 3}
+  atackMeelePrefab: {fileID: 4133504630907977732, guid: 3f1bd9cf688ac0540ab03c1e03bee44b, type: 3}
   player: {fileID: 2031253583}
+  bullet: {fileID: 395343323212663391, guid: ddcb6db05099c00428e7b38eef55ba7a, type: 3}
 --- !u!1 &2116032832
 GameObject:
   m_ObjectHideFlags: 0
