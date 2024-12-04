@@ -8,6 +8,7 @@ TagManager:
   - PowerUp
   - win
   - Meele Atack
+  - Enemy
   layers:
   - Default
   - TransparentFX

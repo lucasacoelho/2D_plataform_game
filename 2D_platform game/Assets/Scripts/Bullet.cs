@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
 
     [SerializeField]private float time;
     // Start is called before the first frame update
+    private float damage = 80;
     void Start()
     {
         StartCoroutine(Timer());
