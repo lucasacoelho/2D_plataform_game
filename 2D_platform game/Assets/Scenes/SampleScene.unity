@@ -405,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 129319917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -303.07803, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0.8000126, y: -0.5, z: 0}
   m_LocalScale: {x: 0.62877, y: 0.62877, z: 0.62877}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -424,8 +424,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a663bd1cdbe18a4093d001ba7ba3704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifebar: {fileID: 0}
+  lifebar: {fileID: 1166352313}
   lifepoints: 200
+  bullet: {fileID: 395343323212663391, guid: ddcb6db05099c00428e7b38eef55ba7a, type: 3}
+  meele: {fileID: 4133504630907977732, guid: 3f1bd9cf688ac0540ab03c1e03bee44b, type: 3}
+  dano: 0
 --- !u!1 &244343053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3081,7 +3084,7 @@ Transform:
   m_GameObject: {fileID: 2031253583}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -311, y: -2.5, z: 0}
+  m_LocalPosition: {x: -7.1, y: -2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,8 @@ public class Bullet : MonoBehaviour
 
     [SerializeField]private float time;
     // Start is called before the first frame update
-    private float damage = 80;
+    public float damage = 80f;
+    public MeeleAtack atack;
     void Start()
     {
         StartCoroutine(Timer());
@@ -21,9 +23,8 @@ public class Bullet : MonoBehaviour
 
     }
     private IEnumerator Timer()
-    {
-        yield return new WaitForSeconds(time);
-        Debug.Log(speed);
-        Destroy(this.gameObject);
-    }
+         {
+             yield return new WaitForSeconds(time);
+             Destroy(this.gameObject);
+         }
 }

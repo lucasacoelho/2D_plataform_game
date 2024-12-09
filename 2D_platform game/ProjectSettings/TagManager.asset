@@ -9,6 +9,7 @@ TagManager:
   - win
   - Meele Atack
   - Enemy
+  - Shot
   layers:
   - Default
   - TransparentFX
