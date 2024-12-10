@@ -426,6 +426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifebar: {fileID: 1166352313}
   lifepoints: 200
+  momentlife: 0
   bullet: {fileID: 395343323212663391, guid: ddcb6db05099c00428e7b38eef55ba7a, type: 3}
   meele: {fileID: 4133504630907977732, guid: 3f1bd9cf688ac0540ab03c1e03bee44b, type: 3}
   dano: 0
@@ -843,8 +844,8 @@ Transform:
   m_GameObject: {fileID: 574125526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -136.7544, y: -4.9897, z: 0}
-  m_LocalScale: {x: 368.66925, y: 3.8194, z: 1}
+  m_LocalPosition: {x: 13.0961, y: -4.9897, z: 0}
+  m_LocalScale: {x: 68.969864, y: 3.8194, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
