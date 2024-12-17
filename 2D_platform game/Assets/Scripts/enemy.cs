@@ -27,12 +27,11 @@ public class enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        while (momentlife < lifepoints)
+        if (momentlife < lifepoints)
         {
-            healing();
-            scalelife();  
+            momentlife += 0.051f;
+            scalelife();
         }
-        
     }
     private void OnCollisionEnter2D (Collision2D GetHit) 
     {
@@ -58,15 +57,9 @@ public class enemy : MonoBehaviour
     }
 
     private void scalelife()
+    
     {
         float size = (momentlife / lifepoints) * 100f;
         lifebar.transform.localScale = new Vector3(size, 5.679343f, 1f);
-
-    }
-
-    private IEnumerator healing()
-    {
-        yield return new WaitForSeconds(1f);
-        momentlife += 1f;
     }
 }
