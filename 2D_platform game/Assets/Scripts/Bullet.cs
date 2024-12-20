@@ -19,8 +19,14 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(speed * Time.deltaTime,0,0));
-
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            transform.Translate(new Vector3(-speed * Time.deltaTime,0,0));
+        }
+        else
+        {
+             transform.Translate(new Vector3(speed * Time.deltaTime,0,0));
+        }
     }
     private IEnumerator Timer()
          {

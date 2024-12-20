@@ -22,7 +22,7 @@ public class MeeleAtack : MonoBehaviour
         {
             Instantiate(atackMeelePrefab, new Vector3(player.transform.position.x + 0.10f, player.transform.position.y - 0.20f, 0), Quaternion.identity);
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             GameObject bulletClone = Instantiate(bullet, new Vector3(player.transform.position.x + 0.10f, player.transform.position.y - 0.20f, 0), Quaternion.identity);
         }
