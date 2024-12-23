@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     public GameObject win;
     public GameObject wintext;
     public GameObject powerUp;
+
+    public bool IsFacingLeft = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,14 @@ public class Player : MonoBehaviour
         float Haxis = Input.GetAxis("Horizontal");
         transform.Translate(new Vector2((Haxis * vel) * Time.deltaTime, 0));
         jump();
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            IsFacingLeft = true;
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            IsFacingLeft = false;
+        }
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             super = false;

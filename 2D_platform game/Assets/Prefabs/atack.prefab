@@ -48,6 +48,7 @@ MonoBehaviour:
   speed: 50
   time: 1
   damage: 80
+  atack: {fileID: 0}
 --- !u!1 &5383663401515017958
 GameObject:
   m_ObjectHideFlags: 0

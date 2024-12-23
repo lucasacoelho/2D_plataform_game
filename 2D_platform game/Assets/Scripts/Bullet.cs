@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     public float damage = 80f;
     public MeeleAtack atack;
+    public Player player;
     void Start()
     {
         StartCoroutine(Timer());
@@ -19,13 +20,13 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
+        if (player.IsFacingLeft == true)
+        { 
             transform.Translate(new Vector3(-speed * Time.deltaTime,0,0));
         }
         else
-        {
-             transform.Translate(new Vector3(speed * Time.deltaTime,0,0));
+        { 
+            transform.Translate(new Vector3(speed * Time.deltaTime,0,0));
         }
     }
     private IEnumerator Timer()
